@@ -18,8 +18,8 @@ int main(void)
 		}
 		else
 		{
-			putchar(space);
 			putchar(comma);
+			putchar(space);
 		}
 		num++;
 	}
