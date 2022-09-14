@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include "main.h"
 
 /**
@@ -13,10 +14,12 @@ int print_last_digit(int n)
 	lastd = n % 10;
 	if (lastd >= 0)
 	{
+		printf("%d", lastd);
 		return (lastd);
 	}
 	else
 	{
+		printf("%d", -1 * lastd);
 		return (-1 * lastd);
 	}
 }
