@@ -8,6 +8,7 @@
 void print_line(int n)
 {
 	int line = 95, newline = 10, i;
+
 	if (n <= 0)
 	{
 		_putchar(newline);
