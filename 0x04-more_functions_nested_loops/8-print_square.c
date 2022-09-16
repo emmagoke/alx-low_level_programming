@@ -2,7 +2,7 @@
 
 /**
  * print_square - Print hash square
- * @c: The number of times
+ * @n: The number of times
  * Return: void
  */
 void print_square(int n)
