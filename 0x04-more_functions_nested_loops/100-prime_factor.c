@@ -6,7 +6,7 @@
  * Return: 1(it is a prime), 0(not a prime)
  */
 
-int _isprime(int n)
+int _isprime(long n)
 {
 	int i;
 
@@ -18,7 +18,7 @@ int _isprime(int n)
 	{
 		for (i = 2; i < n / 2; i++)
 		{
-			if (n % 1 == 0)
+			if (n % i == 0)
 			{
 				return (0);
 			}
@@ -33,9 +33,10 @@ int _isprime(int n)
  * Return: The largest prime factor of n
  */
 
-int prime_factor(int n)
+int prime_factor(long n)
 {
-	int i, largest = 1;
+	int i;
+	int largest = 1;
 
 	if (n <= 0)
 	{
@@ -43,11 +44,15 @@ int prime_factor(int n)
 	}
 	else
 	{
-		for (i = 1; i < n; i++)
+		for (i = 1; i < n / 2; i++)
 		{
-			if ((_isprime(i) == 1) && (i > largest))
+			if (n % i == 0)
 			{
-				largest = i;
+				if ((_isprime(i) == 1) && (i > largest))
+				{
+					largest = i;
+					n /= i;
+				}
 			}
 		}
 		return (largest);
@@ -62,8 +67,8 @@ int prime_factor(int n)
 
 int main(void)
 {
-	long int n = 612852475143;
+	long n = 612852475143;
 
-	printf("%d\n", prime_factor(n));
+	printf("%ld\n", (long int)prime_factor(n));
 	return (0);
 }
