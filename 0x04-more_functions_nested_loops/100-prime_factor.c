@@ -1,9 +1,9 @@
 #include <stdio.h>
 
 /**
- * main - checks your code
- *
- * Return: Always 0.
+ * _isprime - checks if number is prime
+ * @n: the number to be checked
+ * Return: 1(it is a prime), 0(not a prime)
  */
 
 int _isprime(int n)
@@ -16,7 +16,7 @@ int _isprime(int n)
 	}
 	else
 	{
-		for (i = 2; i < n/2; i++)
+		for (i = 2; i < n / 2; i++)
 		{
 			if (n % 1 == 0)
 			{
@@ -26,6 +26,12 @@ int _isprime(int n)
 	}
 	return (1);
 }
+
+/**
+ * prime_factor - checks for the largest prime factor for a number
+ * @n: The number to be checked
+ * Return: The largest prime factor of n
+ */
 
 int prime_factor(int n)
 {
@@ -47,6 +53,12 @@ int prime_factor(int n)
 		return (largest);
 	}
 }
+
+/**
+ * main - checks the code
+ *
+ * Return: Always 0.
+ */
 
 int main(void)
 {
