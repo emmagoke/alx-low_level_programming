@@ -2,7 +2,7 @@
 
 /**
  * reset_to_98 - Changes an integer's value
- * @*n: The pointer to be change
+ * @n: The pointer to be change
  * Return: void
  */
 
