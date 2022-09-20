@@ -6,7 +6,7 @@
  * @src: The string being copy
  * Return: Returns a string
  */
-char _strcpy(char *dest, char *src)
+char *_strcpy(char *dest, char *src)
 {
 	int i;
 
