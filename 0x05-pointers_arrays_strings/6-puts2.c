@@ -12,7 +12,6 @@ void puts2(char *s)
 
 	for (j = 0; s[j] != '\0'; j++)
 	{}
-	j--;
 	for (i = 0; i < j; i = i + 2)
 	{
 		_putchar(s[i]);
