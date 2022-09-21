@@ -30,5 +30,6 @@ int main(void)
 		passlen -= passchar;
 
 	}
+	printf("%c", passlen);
 	return (0);
 }
