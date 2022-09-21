@@ -1,4 +1,5 @@
 #include "main.h"
+/* #include <stdio.h> */
 
 /**
  * _atoi - converts a string to a number
@@ -7,7 +8,8 @@
  */
 int _atoi(char *s)
 {
-	int i = 0, count, result;
+	int i = 0, count = 0;
+	int result;
 	int sign = 0; /* Positive */
 
 	while (s[count] != '\0')
