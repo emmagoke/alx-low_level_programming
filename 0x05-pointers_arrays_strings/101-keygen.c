@@ -22,7 +22,8 @@ int main(void)
 		/* ascii values between 33 and 125 are allowed */
 		if (passchar >= 32 && passchar <= 125)
 		{
-			fprintf(stdout,"%c", passchar);
+			/* fprintf(stdout,"%c", passchar);*/
+			printf("%c", passchar);
 			passlen--;
 		}
 
