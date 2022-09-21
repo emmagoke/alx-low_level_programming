@@ -15,8 +15,7 @@ int main(void)
 
 	srand(time(NULL));
 	/* Password length at most 20 character */
-	passlen = (rand() % 10) + 11;
-	while (passlen > 0)
+	while (passlen < 2772)
 	{
 		/*passchar = (rand() % 100) + 26;*/
 		/* ascii values between 33 and 125 are allowed
@@ -28,7 +27,7 @@ int main(void)
 		} */
 		passchar = rand() % 100;
 		printf("%c", passchar);
-		passlen--;
+		passlen += passchar;
 
 	}
 	printf("\n");
