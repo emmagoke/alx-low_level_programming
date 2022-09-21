@@ -7,14 +7,25 @@
  */
 int _atoi(char *s)
 {
-	int i, n, sign;
+	int i, count, result;
+	int sign = 0; /* Positive */
 
-	for (i = 0; s[i] == ' ' || s[i] == '\n' || s[i] == '\n'; i++)
-		;
-	sign = 1;
-	if (s[i] == '+' || s[i] == '-')
-		sign = (s[i++] == '+') ? 1 : -1;
-	for (n = 0; s[i] >= '0' && s[i] <= '9'; i++)
-		n = 10 * n + s[i] - '0';
-	return (sign * n);
+	while (s[count] != '\0')
+	{
+		if (s[count] == '-')
+			sign++;
+		if (s[count] >= 48 && s[count] <= 57)
+		{
+			i++;
+			result = (result * 10) + (s[count] - '0');
+		}
+		if (s[count] < 48 && s[count] > 57)
+			break;
+		count++;
+	}
+	if (i == 0)
+		return (0);
+	if (sign % 2 == 0)
+		return (result);
+	return (-1 * result);
 }
