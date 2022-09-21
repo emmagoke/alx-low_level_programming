@@ -18,14 +18,17 @@ int main(void)
 	passlen = (rand() % 10) + 11;
 	while (passlen > 0)
 	{
-		passchar = (rand() % 100) + 26;
-		/* ascii values between 33 and 125 are allowed */
+		/*passchar = (rand() % 100) + 26;*/
+		/* ascii values between 33 and 125 are allowed
 		if (passchar >= 32 && passchar <= 125)
-		{
-			/* fprintf(stdout,"%c", passchar);*/
-			printf("%c", passchar);
+		{*/
+			/*fprintf(stdout,"%c", passchar);*/
+			/*printf("%c", passchar);
 			passlen--;
-		}
+		} */
+		passchar = rand() % 100;
+		printf("%c", passchar);
+		passlen--;
 
 	}
 	printf("\n");
