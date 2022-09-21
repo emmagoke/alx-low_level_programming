@@ -12,6 +12,7 @@ int main(void)
 {
 	int passlen = 2772; /* Password length */
 	int passchar; /* Password character */
+	int i;
 
 	srand(time(NULL));
 	/* Password length at most 20 character */
@@ -28,7 +29,7 @@ int main(void)
 		passchar = rand() % 100;
 		printf("%c", passchar);
 		passlen -= passchar;
-
+		i++;
 	}
 	printf("%c", passlen);
 	return (0);
