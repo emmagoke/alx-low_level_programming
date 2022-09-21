@@ -2,6 +2,12 @@
 #include <stdlib.h>
 #include <time.h>
 
+/**
+ * main - writes to the stdout randomly generated
+ * password
+ *
+ * Return: 0.
+ */
 int main(void)
 {
 	int passlen; /* Password length */
@@ -14,7 +20,7 @@ int main(void)
 	{
 		passchar = (rand() % 100) + 26;
 		/* ascii values between 33 and 125 are allowed */
-		if (passchar >= 33 && passchar <= 125)
+		if (passchar >= 32 && passchar <= 125)
 		{
 			fprintf(stdout,"%c", passchar);
 			passlen--;
