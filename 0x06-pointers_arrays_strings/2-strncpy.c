@@ -16,8 +16,10 @@ char *_strncpy(char *dest, char *src, int n)
 	{
 		dest[i] = src[i];
 	}
-	/* Over-writing any remaining char in dest 
-	 * with null characters */
+	/**
+	 *Over-writing any remaining char in dest
+	 *with null characters
+	 */
 	for ( ; i < n; i++)
 	{
 		dest[i] = '\0';
