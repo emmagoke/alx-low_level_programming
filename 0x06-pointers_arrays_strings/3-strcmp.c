@@ -9,12 +9,10 @@
  */
 int _strcmp(char *s1, char *s2)
 {
-	int i, s1_len, s2_len;
+	int i;
 	int s1_a = 0, s2_a = 0;
 
-	s1_len = strlen(s1);
-	s2_len = strlen(s2);
-	for (i = 0; (i < s1_len) && (i < s2_len); i++)
+	for (i = 0; s1[i] != '\0' && s2[i] != '\0'; i++)
 	{
 		if (s1[i] == s2[2])
 		{
