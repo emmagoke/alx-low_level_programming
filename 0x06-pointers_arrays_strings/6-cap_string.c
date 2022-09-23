@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 #include "main.h"
 
 /**
@@ -11,6 +12,10 @@ char *cap_string(char *str)
 	int i, newline = 10;
 	int tab = 9, l_b = 123, r_b = 125;
 
+	if (strlen(str) == 0)
+	{
+		return (str);
+	}
 	for (i = 0; str[i] != '\0'; i++)
 	{
 		if ((str[i] >= 32 && str[i] <= 46) || (str[i] == newline || str[i] == tab || str[i] == l_b || str[i] ==  r_b))
