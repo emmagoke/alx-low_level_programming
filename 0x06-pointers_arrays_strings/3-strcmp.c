@@ -9,37 +9,20 @@
  */
 int _strcmp(char *s1, char *s2)
 {
-	int i, s1_len, s2_len;
-	int s1_a = 0, s2_a = 0;
-
-	s1_len = strlen(s1);
-	s2_len = strlen(s2);
-	if (s1_len == 0)
+	for (; *s1 != '\0' && *s2 != '\0'; s1++, s2++)
 	{
-		s2_a = s2[0];
-		return (s1_a - s2_a);
+		if (*s1 != *s2)
+		{
+			/* Substracting the ascii values of the charater) */
+			return (*s1 - *s2);
+		}
 	}
-	else if (s2_len == 0)
+	if (*s1 == *s2)
 	{
-		s1_a = s1[0];
-		return (s1_a - s2_a);
+		return (0);
 	}
 	else
 	{
-		for (i = 0; s1[i] != '\0' && s2[i] != '\0'; i++)
-		{
-			if (s1[i] == s2[2])
-			{
-				continue;
-			}
-			else
-			{
-				s1_a = s1[i];
-				s2_a = s2[i];
-				/* substract the ascii value of the non-matching string */
-				return (s1_a - s2_a);
-			}
-		}
+		return (*s1 - *s2);
 	}
-	return (0); /* The two strings are equal */
 }
