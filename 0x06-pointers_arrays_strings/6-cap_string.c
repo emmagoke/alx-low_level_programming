@@ -12,9 +12,9 @@ char *cap_string(char *str)
 	int i, newline = 10;
 	int tab = 9, l_b = 123, r_b = 125;
 
-	if (strlen(str) == 0)
+	if (str[0] >= 97 && str[0] <= 122)
 	{
-		return (str);
+		str[0] -= 32;
 	}
 	for (i = 0; str[i] != '\0'; i++)
 	{
