@@ -8,14 +8,16 @@
  */
 char *string_toupper(char *str)
 {
-	/*for ( ; *str != '\0'; str++)
-	{
-		if (*str >= 97 && *str <= 122)
-		{
-			*str -= 32;
-		}
-	}
-	return (str);*/
+	/*
+	* for ( ; *str != '\0'; str++)
+	*{
+	*	if (*str >= 97 && *str <= 122)
+	*	{
+	*		*str -= 32;
+	*	}
+	*}
+	*return (str);
+	*/
 	int i;
 
 	if (strlen(str) == 0)
