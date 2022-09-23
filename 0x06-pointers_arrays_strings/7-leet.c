@@ -13,30 +13,21 @@
  */
 char *leet(char *str)
 {
-	int i;
+	char s[] = "a4e3o0t7l1";
+	int i, j;
 
-	for (i = 0; str[i] != '\0'; i++)
+	i = 0;
+	while (str[i] != '\0')
 	{
-		while (str[i] == 'a' || str[i] == 'A')
+		for (j = 0; s[j] != '\0'; j += 2)
 		{
-			str[i] = '4';
+			if (str[i] == s[j] || str[i] == (s[j] - 32))
+			{
+				str[i] = s[j + 1];
+				break;
+			}
 		}
-		while (str[i] == 'e' || str[i] == 'E')
-		{
-			str[i] = '3';
-		}
-		while (str[i] == 'o' || str[i] == 'O')
-		{
-			str[i] = '0';
-		}
-		while (str[i] == 't' || str[i] == 'T')
-		{
-			str[i] = '7';
-		}
-		while (str[i] == 'l' || str[i] == 'L')
-		{
-			str[i] = '1';
-		}
+		i++;
 	}
 	return (str);
 }
