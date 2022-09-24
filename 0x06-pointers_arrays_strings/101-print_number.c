@@ -8,11 +8,12 @@
  */
 void print_number(int n)
 {
-	int temp, sign = 1, numofdigit = 1;
+	int temp = n, sign = 1, numofdigit = 1;
 	int out = 0;
+	unsigned int ne;
 
-	temp = n;
-	if (n == 0)
+	ne = n;
+	if (ne == 0)
 		_putchar(n + '0');
 	if (temp < 0)
 	{
@@ -26,17 +27,17 @@ void print_number(int n)
 	}
 	numofdigit /= 10;
 	if (sign < 0)
-		n *= sign;
+		ne *= sign;
 	while (numofdigit > 0)
 	{
-		out = n / (int)numofdigit;
+		out = ne / (int)numofdigit;
 		if (sign < 0)
 		{
 			_putchar('-');
 			sign = 1;
 		}
 		_putchar(out + '0');
-		n %= (int)numofdigit;
+		ne %= numofdigit;
 		numofdigit /= 10;
 	}
 }
