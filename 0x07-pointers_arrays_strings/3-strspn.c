@@ -2,7 +2,7 @@
 
 /**
  * _strspn - Searching the string str2 in the string str1.
- * It returns the count of characters of str2 that are matched in the str1 
+ * It returns the count of characters of str2 that are matched in the str1
  * @s: The string we are searching in.
  * @accept: The string we are checking the index
  * Return: the number of bytes in the initial segment of s which
