@@ -18,5 +18,12 @@ char *_strchr(char *s, char c)
 			return (s + i);
 		}
 	}
-	return (s + i);
+	if (s[i] == c) /* end of list */
+	{
+		return (s + i);
+	}
+	else
+	{
+		return ('\0');
+	}
 }
