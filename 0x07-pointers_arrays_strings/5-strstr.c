@@ -1,8 +1,8 @@
 #include <stdio.h>
 
 /**
- * _strstr - This function finds the first occurrence of the substring
- * needle in the string haystack. The terminating null bytes (\0) are not compared
+ * _strstr - This function finds the first occurrence of the substring needle
+ * in the string haystack. The terminating null bytes (\0) are not compared
  * @haystack: The string to be checked
  * @needle: The substring to be checked.
  * Return: a pointer to the beginning of the located substring,
@@ -19,8 +19,7 @@ char *_strstr(char *haystack, char *needle)
 		i = 0;
 		if (haystack[i] == needle[i])
 		{
-			do
-			{
+			do {
 				if (needle[i + 1] == '\0')
 					return (haystack);
 				i++;
