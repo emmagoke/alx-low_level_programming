@@ -15,7 +15,7 @@ int is_prime_number(int n)
 }
 
 /**
- * _divide - Check if a number x is divisible 
+ * _divide - Check if a number x is divisible
  * by y upto y + 1 < n
  * @x: An Integer
  * @y: An integer
