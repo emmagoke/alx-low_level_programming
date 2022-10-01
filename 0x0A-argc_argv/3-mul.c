@@ -10,19 +10,18 @@
  */
 int main(int argc, char *argv[])
 {
-	int result = 1, i;
+	int result = 1, i, j;
 
-	if (argc < 2 && **argv)
+	if (argc < 2)
 	{
 		printf("Error\n");
 		return (1);
 	}
 	else
 	{
-		for (i = 1; i < argc; i++)
-		{
-			result *= strtol(argv[i], NULL, 10);
-		}
+		i = strtol(argv[1], NULL, 10);
+		j = strtol(argv[2], NULL, 10);
+		result = i * j;
 		printf("%d\n", result);
 		return (0);
 	}
