@@ -33,13 +33,11 @@ int main(int argc, char *argv[])
 				n %= 10;
 			}
 			else if (n >= 5)
-			{
-				change += n / 5;
+			{	change += n / 5;
 				n %= 5;
 			}
 			else if (n >= 2)
-			{
-				change += n / 2;
+			{	change += n / 2;
 				n %= 2;
 			}
 			else
