@@ -10,7 +10,7 @@
  */
 int main(int argc, char *argv[])
 {
-	int sum = 0, i, x;
+	int sum = 0, i, x, j;
 
 	if (argc <= 1)
 	{
@@ -21,12 +21,15 @@ int main(int argc, char *argv[])
 	{
 		for (i = 1; i < argc; i++)
 		{
-			x = strtol(argv[i], NULL, 10);
-			if (x == 0)
+			for (j = 0; argv[i][j] != '\0'; j++)
 			{
-				printf("Error\n");
-				return (1);
+				if (argv[i][j] < '0' || argv[i][j] > '9')
+				{
+					printf("Error\n");
+					return (1);
+				}
 			}
+			x = strtol(argv[i], NULL, 10);
 			sum += x;
 		}
 		printf("%d\n", sum);
