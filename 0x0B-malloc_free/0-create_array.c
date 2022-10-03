@@ -17,7 +17,7 @@ char *create_array(unsigned int size, char c)
 		return ('\0');
 	for (i = 0; i < size; i++)
 	{
-		printf("%c\n", buffer[i]);
+		buffer[i] = c;
 	}
 	return (buffer);
 }
