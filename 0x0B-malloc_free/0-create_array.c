@@ -10,9 +10,10 @@
  */
 char *create_array(unsigned int size, char c)
 {
-	char *buffer = (char *)malloc(size * sizeof(c));
+	char *buffer;
 	unsigned int i;
 
+	buffer = (char *)malloc(size * sizeof(c));
 	if (size == 0)
 		return ('\0');
 	for (i = 0; i < size; i++)
