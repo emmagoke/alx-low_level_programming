@@ -20,7 +20,7 @@ char *str_concat(char *s1, char *s2)
 		s2 = "";
 	while (s1[size1] != '\0')
 		size1++;
-	size1++;
+
 	while (s2[size2] != '\0')
 		size2++;
 	size2++;
