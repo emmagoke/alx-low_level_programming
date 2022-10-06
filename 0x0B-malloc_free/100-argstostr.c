@@ -25,7 +25,6 @@ char *argstostr(int ac, char **av)
 		else
 			count += 1;
 	}
-	printf("%d\n", count);
 	if (count == 0)
 		return (NULL);
 	count += 2;
