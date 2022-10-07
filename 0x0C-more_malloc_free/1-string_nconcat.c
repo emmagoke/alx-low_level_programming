@@ -15,10 +15,10 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	char *str;
 	unsigned int i, j;
 
-	if (*s1 == NULL)
-		*s1 = "";
-	if (*s2 == NULL)
-		*s2 = "";
+	if (s1 == NULL)
+		s1 = "";
+	if (s2 == NULL)
+		s2 = "";
 
 	str = malloc((strlen(s1) + n + 1));
 
