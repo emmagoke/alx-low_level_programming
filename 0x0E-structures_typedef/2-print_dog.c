@@ -17,14 +17,16 @@ void print_dog(struct dog *d)
 	}
 	else
 	{
-		if (new.name == NULL)
+		if (new.name == NULL || new.owner == NULL)
 		{
 			printf("Name: (nil)\n");
 		}
+		/*
 		if (new.owner == NULL)
 		{
 			printf("Owner: (nil)\n");
 		}
+		*/
 		else
 		{
 			printf("Name: %s\n", new.name);
