@@ -9,11 +9,7 @@
  */
 void print_dog(struct dog *d)
 {
-	if (d == NULL)
-	{
-		;
-	}
-	else
+	if (d)
 	{
 		if ((*d).name == NULL)
 		{
