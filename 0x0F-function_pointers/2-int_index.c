@@ -3,8 +3,8 @@
 /**
  * int_index - This function searches for an integer.
  * @array: The array to be worked upon.
- * @size is the number of elements in the array array
- * @cmp is a pointer to the function to be used to compare values.
+ * @size: is the number of elements in the array array
+ * @cmp: is a pointer to the function to be used to compare values.
  * Return: the index of the first element for which the
  * cmp function does not return 0. If no element matches,
  * return -1. If size <= 0, return -1.
