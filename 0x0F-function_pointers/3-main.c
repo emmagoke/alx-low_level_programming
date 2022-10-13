@@ -13,7 +13,7 @@ int main(int argc, char *argv[])
 {
 	if (argc != 4)
 	{
-		printf("Error2\n");
+		printf("Error\n");
 		exit(98);
 	}
 	if (strcmp(argv[2], "+") != 0 && strcmp(argv[2], "-") != 0
