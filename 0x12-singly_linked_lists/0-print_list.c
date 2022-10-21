@@ -9,27 +9,20 @@
 size_t print_list(const list_t *h)
 {
 	size_t len = 0;
-	list_t *temp = (list_t *)malloc(sizeof(list_t));
+	const list_t *temp = h;
 
-	if (temp != NULL)
+	while (temp != NULL)
 	{
-		temp->str = h->str;
-		temp->len = h->len;
-		temp->next = h->next;
-		while (temp != NULL)
+		if (temp->str == NULL)
 		{
-			if (temp->str == NULL)
-			{
-				printf("[0] (nil)\n");
-			}
-			else
-			{
-				printf("[%u] %s\n", temp->len, temp->str);
-			}
-			len++;
-			temp = temp->next;
+			printf("[0] (nil)\n");
 		}
+		else
+		{
+			printf("[%u] %s\n", temp->len, temp->str);
+		}
+		len++;
+		temp = temp->next;
 	}
-	free(temp);
 	return (len);
 }
