@@ -1,5 +1,6 @@
 #include "lists.h"
 
+unsigned int len(listint_t *head);
 /**
  * insert_nodeint_at_index - This function inserts a new node at
  * a given position.
@@ -15,7 +16,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	listint_t *temp = *head;
 	unsigned int i;
 
-	if (new == NULL)
+	if (new == NULL || idx > len(*head))
 	{
 		free(new);
 		return (NULL);
@@ -42,4 +43,22 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 		return (new);
 	}
 	return (NULL);
+}
+
+/**
+ * len - Calculate the length of a linked list.
+ * @head: The pointer to the head of the linked list.
+ * Return: The length of the linked list.
+ */
+unsigned int len(listint_t *head)
+{
+	unsigned int len = 0;
+	listint_t *temp = head;
+
+	while (temp != NULL)
+	{
+		len += 1;
+		temp = temp->next;
+	}
+	return (len);
 }
