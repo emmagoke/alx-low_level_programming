@@ -1,5 +1,12 @@
 #include "main.h"
 
+/**
+ * read_textfile - Tis function reads a text file and prints it
+ * to the POSIX standard output.
+ * @filename: The name of the file to be read.
+ * @letters: is the number of letters it should read and print.
+ * Return: the actual number of letters it could read and print
+ */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	char *buf = malloc(sizeof(char) * letters);
