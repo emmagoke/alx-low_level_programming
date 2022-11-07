@@ -27,6 +27,6 @@ void print_number(int n)
 void print_int(int n)
 {
 	if (n > 9)
-		print_number(n / 10);
+		print_int(n / 10);
 	_putchar((n % 10) + '0');
 }
