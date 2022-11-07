@@ -18,6 +18,12 @@ void print_number(int n)
 		print_int(n);
 }
 
+/**
+ * print_int - This is an helper function for print_number,
+ * to print integer.
+ * @n: The n to be printed.
+ * Return: Nothing.
+ */
 void print_int(int n)
 {
 	if (n > 9)
