@@ -4,7 +4,9 @@ void print_int(int n);
 
 /**
  * print_number - This function prints an integer.
- * @n: 
+ * @n: The number to be printed.
+ * Return: Nothing.
+ */
 void print_number(int n)
 {
 	if (n < 0)
