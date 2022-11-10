@@ -9,7 +9,7 @@
  */
 void print_rd(char *str)
 {
-	dprintf(2, "Error: Can't read from file %s\n", str);
+	printf("Error: Can't read from file %s\n", str);
 	exit(98);
 }
 
@@ -21,7 +21,7 @@ void print_rd(char *str)
  */
 void print_wr(char *str)
 {
-	dprintf(2, "Error: Can't write to %s\n", str);
+	printf("Error: Can't write to %s\n", str);
 	exit(99);
 }
 /**
