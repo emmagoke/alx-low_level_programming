@@ -9,6 +9,18 @@
  */
 void print_rd(char *str)
 {
+	dprintf(2, "Error: Can't read from file %s\n", str);
+	exit(98);
+}
+
+/**
+ * print_rd_f - Prints the error message when
+ * file can't be read from a file.
+ * @str: The name of the file that can't be read.
+ * Return: Nothing
+ */
+void print_rd_f(char *str)
+{
 	printf("Error: Can't read from file %s\n", str);
 	exit(98);
 }
@@ -21,9 +33,22 @@ void print_rd(char *str)
  */
 void print_wr(char *str)
 {
+	dprintf(2, "Error: Can't write to %s\n", str);
+	exit(99);
+}
+
+/**
+ * print_wr_f - Prints the error message when
+ * we can't write to a file.
+ * @str: The name of the file that can't be written to.
+ * Return: Nothing.
+ */
+void print_wr_f(char *str)
+{
 	printf("Error: Can't write to %s\n", str);
 	exit(99);
 }
+
 /**
  * main - copies the content of a file to another file.
  * @ac: The number command line argument
@@ -50,11 +75,11 @@ int main(int ac, char **av)
 	{
 		if (write(fd2, buf, n) == -1)
 		{
-			print_wr(av[2]);
+			print_wr_f(av[2]);
 		}
 	}
 	if (n == -1)
-		print_rd(av[2]);
+		print_rd_f(av[2]);
 	free(buf);
 	if ((close(fd1) == -1))
 	{
