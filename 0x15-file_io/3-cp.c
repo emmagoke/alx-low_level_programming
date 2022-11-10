@@ -33,7 +33,7 @@ void print_rd_f(char *str)
  */
 void print_wr(char *str)
 {
-	dprintf(2, "Error: Can't write to %s\n", str);
+	dprintf(STDERR_FILENO, "Error: Can't write to %s\n", str);
 	exit(99);
 }
 
@@ -75,11 +75,11 @@ int main(int ac, char **av)
 	{
 		if (write(fd2, buf, n) == -1)
 		{
-			print_wr_f(av[2]);
+			print_wr(av[2]);
 		}
 	}
 	if (n == -1)
-		print_rd_f(av[2]);
+		print_rd(av[2]);
 	free(buf);
 	if ((close(fd1) == -1))
 	{
